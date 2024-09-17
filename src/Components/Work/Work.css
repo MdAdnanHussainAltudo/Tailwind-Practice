@@ -1,0 +1,7 @@
+@media (min-width: 768px) {
+  .img-cont {
+    min-width: 20rem;
+    max-width: 20rem;
+    max-height: 14rem;
+  }
+}
