@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
@@ -9,51 +9,18 @@ import Contact from "./Pages/Contact.jsx";
 import "./App.css";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: (
-        <>
-          <Navbar />
-          <Home />
-          <Footer />
-        </>
-      ),
-    },
-    {
-      path: "/works",
-      element: (
-        <>
-          <Navbar />
-          <MyWorks />
-          <Footer />
-        </>
-      ),
-    },
-    {
-      path: "/blog",
-      element: (
-        <>
-          <Navbar />
-          <Blog />
-          <Footer />
-        </>
-      ),
-    },
-    {
-      path: "/contact",
-      element: (
-        <>
-          <Navbar />
-          <Contact />
-          <Footer />
-        </>
-      ),
-    },
-  ]);
   return (
     <>
-      <RouterProvider router={router} />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/works" element={<MyWorks />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }
