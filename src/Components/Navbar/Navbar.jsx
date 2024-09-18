@@ -5,11 +5,12 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: "Works", href: "#", current: false },
-  { name: "Blog", href: "#", current: false },
-  { name: "Contact", href: "#", current: false },
+  { name: "Works", href: "/works", current: false },
+  { name: "Blog", href: "/blog", current: false },
+  { name: "Contact", href: "/contact", current: false },
 ];
 
 function classNames(...classes) {
@@ -37,15 +38,17 @@ export default function Example() {
             </DisclosureButton>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
-            <div className="hero-name flex  md:text-2xl text-slate-950 items-center font-bold">
-              Md Adnan Hussain
-            </div>
+            <Link to="/">
+              <div className="hero-name flex  md:text-2xl text-slate-950 items-center font-bold">
+                Md Adnan Hussain
+              </div>
+            </Link>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
                     aria-current={item.current ? "page" : undefined}
                     className={classNames(
                       "text-slate-800",
@@ -53,7 +56,7 @@ export default function Example() {
                     )}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

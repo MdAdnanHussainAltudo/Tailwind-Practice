@@ -1,4 +1,4 @@
-import Work from "../Work/Work";
+import Work from "./Work/Work.jsx";
 import "./Works.css";
 
 const works = [
