@@ -8,8 +8,8 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: "Works", href: "/works", current: false },
   { name: "Blog", href: "/blog", current: false },
+  { name: "Works", href: "/works", current: false },
   { name: "Contact", href: "/contact", current: false },
 ];
 

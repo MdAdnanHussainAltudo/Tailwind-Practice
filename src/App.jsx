@@ -2,10 +2,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
-import Home from "./Pages/Home.jsx";
-import MyWorks from "./Pages/MyWorks.jsx";
-import Blog from "./Pages/Blog.jsx";
-import Contact from "./Pages/Contact.jsx";
+import HomePage from "./Pages/HomePage.jsx";
+import BlogPage from "./Pages/BlogPage.jsx";
+import WorkPage from "./Pages/WorkPage.jsx";
+import ContactPage from "./Pages/ContactPage.jsx";
 import "./App.css";
 
 function App() {
@@ -14,10 +14,10 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/works" element={<MyWorks />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/works" element={<WorkPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>

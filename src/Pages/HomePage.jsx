@@ -2,7 +2,7 @@ import Hero from "../Components/Hero/Hero.jsx";
 import Posts from "../Components/Posts/Posts.jsx";
 import Works from "../Components/Works/Works.jsx";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <>
       <Hero />
@@ -12,4 +12,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
