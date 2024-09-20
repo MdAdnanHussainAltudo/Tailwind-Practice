@@ -2,7 +2,7 @@ import "./Work.css";
 
 const Work = (prop) => {
   return (
-    <div className="work-cont my-12 px-8 md:px-0">
+    <div className="work-cont my-12 px-8 md:px-4">
       <div className="md:flex justify-between mb-6">
         <div className="md:flex">
           <div className="img-cont w-full h-full me-6 mb-6">

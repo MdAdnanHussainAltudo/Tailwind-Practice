@@ -9,8 +9,8 @@ const blogdata = {
 
 const BlogPage = () => {
   return (
-    <div className="md:container md:mx-auto p-4 lg:px-48">
-      <h1 className="font-bold text-4xl mb-12">Blog</h1>
+    <div className="md:container md:mx-auto p-4 lg:px-20">
+      <h1 className="font-bold text-4xl mb-12 px-8 md:px-4">Blog</h1>
       <Blog blogdata={blogdata} />
       <Blog blogdata={blogdata} />
       <Blog blogdata={blogdata} />
