@@ -5,7 +5,7 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const navigation = [
   { name: "Blog", href: "/blog", current: false },
@@ -19,10 +19,10 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="bg-white mb-8">
-      <div className="mx-auto max-w-7xl px-8 md:px-4">
-        <div className="relative flex h-16 items-center justify-between">
-          <div className="absolute inset-y-0 right-0  flex items-center sm:hidden">
+    <Disclosure as="nav" className="bg-white">
+      <div className="mx-auto max-w-7xl md:container md:mx-auto p-4 lg:px-20">
+        <div className="relative flex items-center justify-between px-8 md:px-4">
+          <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
             <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
               <span className="absolute -inset-0.5" />
@@ -37,26 +37,36 @@ export default function Example() {
               />
             </DisclosureButton>
           </div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
-            <Link to="/">
-              <div className="hero-name flex  md:text-2xl text-slate-950 items-center font-bold">
+          <div className="flex flex-1 items-center  sm:items-stretch sm:justify-between">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                classNames(
+                  "flex items-center justify-center",
+                  isActive && "linkactive"
+                )
+              }
+            >
+              <div className="hero-name text-xl text-slate-950 font-bold">
                 Md Adnan Hussain
               </div>
-            </Link>
+            </NavLink>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
-                  <Link
+                  <NavLink
                     key={item.name}
                     to={item.href}
-                    aria-current={item.current ? "page" : undefined}
-                    className={classNames(
-                      "text-slate-800",
-                      "rounded-md px-3 py-2 text-base font-medium"
-                    )}
+                    className={({ isActive }) =>
+                      classNames(
+                        "text-slate-800",
+                        "rounded-md px-3 py-2 text-base font-medium",
+                        isActive && "linkactive"
+                      )
+                    }
                   >
                     {item.name}
-                  </Link>
+                  </NavLink>
                 ))}
               </div>
             </div>
@@ -68,12 +78,12 @@ export default function Example() {
           {navigation.map((item) => (
             <DisclosureButton
               key={item.name}
-              as={Link}
+              as={NavLink}
               to={item.href}
               aria-current={item.current ? "page" : undefined}
               className={classNames(
                 "text-slate-800",
-                "block rounded-md px-3 py-2 text-base font-medium"
+                "block rounded-md p-3 text-base font-medium"
               )}
             >
               {item.name}

@@ -3,3 +3,8 @@
 .hero-name {
   font-family: "Major Mono Display", system-ui;
 }
+
+.linkactive {
+  text-shadow: 0 0 0.1rem #333;
+  transform: scale(1.15);
+}
