@@ -1,3 +1,5 @@
+import "./ContactForm.css";
+
 export default function ContactForm() {
   return (
     <form>
@@ -81,13 +83,13 @@ export default function ContactForm() {
 
       <div className="mt-6 flex items-center gap-x-6">
         <button
-          type="submit"
+          type="button"
           className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
         >
           Send
         </button>
         <button
-          type="button"
+          type="reset"
           className="text-sm font-semibold leading-6 text-gray-900"
         >
           Cancel

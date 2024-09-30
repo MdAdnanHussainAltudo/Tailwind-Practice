@@ -36,7 +36,7 @@ const Footer = () => {
           />
         ))}
       </div>
-      <p>Copyright &copy;2020 All rights reserved</p>
+      <p className="text-slate-400">Copyright &copy;2020 All rights reserved</p>
     </footer>
   );
 };
