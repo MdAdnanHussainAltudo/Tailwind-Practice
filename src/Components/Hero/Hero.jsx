@@ -22,7 +22,7 @@ const Hero = () => {
               inventore, beatae consectetur libero dolores ex accusamus incidunt
               itaque sint aliquam quia vero.
             </p>
-            <button className="bg-red-500 hover:bg-red-600 text-white px-3 py-1.5 text-base">
+            <button className="bg-red-500 hover:bg-red-600 text-white px-3 py-1.5 text-base rounded-md">
               Download Resume
             </button>
           </div>
