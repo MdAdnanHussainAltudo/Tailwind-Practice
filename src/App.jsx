@@ -14,10 +14,10 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/works" element={<WorkPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/Tailwind-Practice" element={<HomePage />} />
+          <Route path="/Tailwind-Practice/blog" element={<BlogPage />} />
+          <Route path="/Tailwind-Practice/works" element={<WorkPage />} />
+          <Route path="/Tailwind-Practice/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>

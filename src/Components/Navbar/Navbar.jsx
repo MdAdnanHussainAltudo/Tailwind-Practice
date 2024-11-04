@@ -8,9 +8,9 @@ import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 
 const navigation = [
-  { name: "Blog", href: "/blog", current: false },
-  { name: "Works", href: "/works", current: false },
-  { name: "Contact", href: "/contact", current: false },
+  { name: "Blog", href: "/Tailwind-Practice/blog", current: false },
+  { name: "Works", href: "/Tailwind-Practice/works", current: false },
+  { name: "Contact", href: "/Tailwind-Practice/contact", current: false },
 ];
 
 function classNames(...classes) {
@@ -39,7 +39,7 @@ export default function Example() {
           </div>
           <div className="flex flex-1 items-center  sm:items-stretch sm:justify-between">
             <NavLink
-              to="/"
+              to="/Tailwind-Practice"
               className={({ isActive }) =>
                 classNames(
                   "flex items-center justify-center",
